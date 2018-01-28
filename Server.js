@@ -12,7 +12,7 @@ class Server {
     startup(port) {
         this.app.use(express.static(__dirname + '/public'))
         this.app.get('*', (req, res) => {
-            res.sendFile(__dirname + '/public/index.html');
+            res.sendFile(__dirname + '/public/index.html')
         })
 
         this.server.listen(port, () => {
